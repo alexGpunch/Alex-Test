@@ -1,0 +1,94 @@
+@import 'abstracts/spacing';
+@import 'abstracts/colors';
+@import 'abstracts/spacing';
+
+* {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+@mixin padding(
+  $top: null, 
+  $right: null, 
+  $bottom: null, 
+  $left: null, 
+  $padAll: null
+) {
+  @if ($padAll) {
+    padding: $padAll
+  } @else {
+    padding-top: $top;
+    padding-right: $right;
+    padding-bottom: $bottom;
+    padding-left: $left;
+  }
+}
+
+@mixin marginMiddle() {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin font($size: $font-size-sm, $bold: false) {
+  font-size: $size;
+  @if ($bold) {
+    font-weight: bold;
+  }
+}
+
+@mixin card ($headingColor:$lightgreen, $backgroundColor:$lightgrey) {
+  @include marginMiddle;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  @include padding($bottom: $spacing-sm);
+  &__item {
+    overflow: hidden;
+    list-style: none;
+    width: 32%;
+    height: auto;
+    border-radius: 10px;
+    &__fig {
+      display: block;
+      width: 100%;
+      height: 50vh;
+      &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__title {
+      color: $headingColor;
+      background-color: $backgroundColor;
+      @include font(20px, true);
+      @include padding($padAll: $spacing-sm);
+    }
+    &__body {
+      background-color: $backgroundColor;
+      @include padding($left: $spacing-sm);
+      &__arrow {
+        display: block;
+        color: $headingColor;
+        font-size: 24px;
+        @include padding($top: $spacing-sm, $bottom: $spacing-md);
+      }
+    }
+  }
+}
+
+.container {
+    max-width: 100%;
+}
+
+.card1 {
+  @include card($headingColor:$lightgreen, $backgroundColor:$lightgrey);
+}
+
+.card2 {
+  @include card($headingColor:$white, $backgroundColor:$lightgreen);
+}

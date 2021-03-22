@@ -1,0 +1,126 @@
+* {
+  padding: 0;
+  margin: 0;
+  letter-spacing: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+}
+
+.container {
+  max-width: 100%;
+}
+
+.card1 {
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.card1__item {
+  overflow: hidden;
+  list-style: none;
+  width: 32%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card1__item__fig {
+  display: block;
+  width: 100%;
+  height: 50vh;
+}
+
+.card1__item__fig__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card1__item__title {
+  color: #30BFBF;
+  background-color: lightgrey;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.card1__item__body {
+  background-color: lightgrey;
+  padding-left: 10px;
+}
+
+.card1__item__body__arrow {
+  display: block;
+  color: #30BFBF;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.card2 {
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.card2__item {
+  overflow: hidden;
+  list-style: none;
+  width: 32%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card2__item__fig {
+  display: block;
+  width: 100%;
+  height: 50vh;
+}
+
+.card2__item__fig__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card2__item__title {
+  color: white;
+  background-color: #30BFBF;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.card2__item__body {
+  background-color: #30BFBF;
+  padding-left: 10px;
+}
+
+.card2__item__body__arrow {
+  display: block;
+  color: white;
+  font-size: 24px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
